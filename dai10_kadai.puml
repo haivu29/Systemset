@@ -1,0 +1,16 @@
+@startuml
+left to right direction
+
+actor Student
+
+rectangle "eI-Campus" {
+  (小テスト)
+  (お知らせ閲覧)
+  (課題提出)
+}
+
+Student --> (小テスト)
+Student --> (お知らせ閲覧)
+Student --> (課題提出)
+
+@enduml
