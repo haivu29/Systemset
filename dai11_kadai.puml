@@ -1,0 +1,42 @@
+@startuml
+left to right direction
+
+
+
+package "eI-Campus" {
+  usecase "アンケート回答" as el1
+  usecase "課題をダウンロード" as el2
+  usecase "掲示板を見る" as el3
+  usecase "試験をする" as el4
+  usecase "お知らせを発行" as el5
+}
+package "Universal passport" {
+  usecase "シラバス参照" as uni1
+  usecase "成績確認" as uni2
+  usecase "授業時間確認" as uni3
+  usecase "個人設定" as uni4
+  usecase "履修登録" as uni5
+}
+
+
+:学生: --> el1
+:学生: --> el2
+:学生: --> el3
+:学生: --> el4
+:学生: --> uni1
+:学生: --> uni2
+:学生: --> uni3
+:学生: --> uni4
+:学生: --> uni5
+
+
+:教師: --> el3
+:教師: --> el5
+
+:教師: --> uni1
+:教師: --> uni2
+:教師: --> uni3
+:教師: --> uni4
+
+
+@enduml
