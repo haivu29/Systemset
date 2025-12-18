@@ -1,0 +1,7 @@
+@startuml
+Client ->Sarver: データを要求
+Sarver -> DS: 問い合わせ
+
+DS -->Sarver: 結果
+Sarver --> Client: データ
+@enduml

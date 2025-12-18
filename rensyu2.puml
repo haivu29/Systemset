@@ -1,0 +1,18 @@
+@startuml
+
+participant "Main Function" as Main
+participant "calculate" as Calc
+participant "getInput" as In
+
+Main -> Calc : データを計算する
+activate Calc
+
+Calc -> In : 入力データ要求
+activate In
+In --> Calc : 入力データ
+deactivate In
+
+Calc --> Main : 計算結果
+deactivate Calc
+
+@enduml
